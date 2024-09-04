@@ -27,6 +27,7 @@ export default function Header() {
         <a
           href="https://www.linkedin.com/in/dardan-nuredini-23b656239/"
           target="_blank"
+          rel="noreferrer"
         >
           <span className="text-5xl text-cyan-600 hover:text-cyan-500 transition-colors">
             <FaLinkedinIn />
