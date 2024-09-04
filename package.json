@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://dardan100.github.io/Portfolio/",
+  "homepage": "https://dardan100.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "deploy": "gh-pages -d dist",
