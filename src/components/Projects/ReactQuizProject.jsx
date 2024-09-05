@@ -142,10 +142,7 @@ function ProjectDetails({ onClose }) {
               target="_blank"
               rel="noreferrer"
             >
-              <button
-                onClick={onClose}
-                className="mt-10 p-2 bg-cyan-600 text-white rounded"
-              >
+              <button className="mt-10 p-2 bg-cyan-600 text-white rounded">
                 Code
               </button>
             </a>
