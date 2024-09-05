@@ -127,16 +127,21 @@ function ProjectDetails({ onClose }) {
         </div>
         <div className="flex justify-between">
           <div className="flex gap-2">
-            <a href="https://flixx-app-amber.vercel.app/" target="_blank">
-              <button
-                onClick={onClose}
-                className="mt-10 p-2 bg-cyan-600 text-white rounded"
-              >
+            <a
+              href="https://react-quiz-beta-ten.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="mt-10 p-2 bg-cyan-600 text-white rounded">
                 Demo
               </button>
             </a>
 
-            <a href="https://github.com/dardan100/MovieFlixx" target="_blank">
+            <a
+              href="https://github.com/dardan100/ReactQuiz"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button
                 onClick={onClose}
                 className="mt-10 p-2 bg-cyan-600 text-white rounded"
