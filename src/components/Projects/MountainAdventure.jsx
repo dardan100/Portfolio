@@ -4,12 +4,13 @@ import { GiStack } from "react-icons/gi";
 import { FaListCheck } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiReactquery } from "react-icons/si";
+
 import { FaHtml5 } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 
 import React, { useState } from "react";
 import MountainAdventureSlider from "../Sliders/MountainAdventureSlider";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 export default function PizzaFastProject() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -25,17 +26,17 @@ export default function PizzaFastProject() {
     <>
       <div
         onClick={handleOpenModal}
-        className="border rounded-lg  text-sm cursor-pointer h-auto flex flex-col justify-between"
+        className="border rounded-lg text-sm cursor-pointer h-auto flex flex-col justify-between"
       >
         <div className="rounded-t-lg">
           <img
             src={mountaubDashboard}
             alt="pizza login"
-            className="w-[470px] h-[233px] rounded-t-lg"
+            className="w-[470px] h-[235px] rounded-t-lg object-fit"
           />
         </div>
         <div className="h-11 text-center flex items-center p-1 bg-gray-300 flex-row">
-          <h1>Manage reservations bookings</h1>
+          <h1>CabinEase: Simplify Your Cabin and Booking Operations</h1>
         </div>
       </div>
 
@@ -45,9 +46,13 @@ export default function PizzaFastProject() {
 }
 
 function ProjectDetails({ onClose }) {
+  const ref = useOutsideClick(onClose);
   return (
-    <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 flex items-center justify-center p-8 md:p-[100px] overflow-x-scroll ">
-      <div className="bg-white p-5 rounded-lg w-full my-auto">
+    <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-55 flex items-center justify-center p-8 md:p-[100px] overflow-x-scroll ">
+      <div
+        ref={ref}
+        className="bg-gray-100 p-5 rounded-lg w-full xl:w-auto my-auto"
+      >
         <h1 className="font-bold text-4xl mb-4">FastReactPizza</h1>
         <div className="">
           <p className="font-bold text-xl mb-2 flex items-center gap-1">
@@ -66,14 +71,7 @@ function ProjectDetails({ onClose }) {
                   React
                 </p>
               </div>
-              <div className="border bg-cyan-600 items-center flex justify-center rounded-md auto px-2 h-[40px]">
-                <p className="flex items-center gap-1 justify-center text-sm text-white ">
-                  <span>
-                    <SiReactquery />
-                  </span>
-                  React query
-                </p>
-              </div>
+
               <div className="border bg-cyan-600 items-center flex justify-center rounded-md px-2 w-auto h-[40px]">
                 <p className="flex items-center gap-1 justify-center text-white ">
                   <span>
@@ -102,21 +100,25 @@ function ProjectDetails({ onClose }) {
         </p>
         <div>
           <ul className="mt-1">
-            <li className="mb-2">
-              <span className="text-cyan-600">Intuitive User Interface:</span> A
-              clean and visually appealing design that allows users to navigate
-              through the menu and place orders effortlessly.
+            <li className="md:text-xl">
+              <span className="text-cyan-600">Manage Cabins:</span> A Create and
+              customize cabins, tailoring them to specific requirements.
             </li>
-            <li className="mb-2">
-              <span className="text-cyan-600">Customization Options:</span>{" "}
-              Extensive customization for pizzas, including toppings, crust
-              types, and sizes, ensuring every order is made to the user's exact
-              preferences.
+            <li className="md:text-xl">
+              <span className="text-cyan-600">Handle Bookings:</span> Add,
+              manage, and update bookings seamlessly for each cabin.
             </li>
-            <li>
-              <span className="text-cyan-600">Responsive Design:</span>{" "}
-              Optimized for various devices, ensuring a consistent and enjoyable
-              experience whether on a smartphone, tablet, or desktop.
+            <li className="md:text-xl">
+              <span className="text-cyan-600">
+                Streamline Check-ins/Check-outs:
+              </span>{" "}
+              Efficiently check in and check out bookings for an organized
+              experience.
+            </li>
+            <li className="md:text-xl">
+              <span className="text-cyan-600">Account Management:</span> Create
+              new accounts and update existing user profiles for a personalized
+              experience.
             </li>
           </ul>
         </div>

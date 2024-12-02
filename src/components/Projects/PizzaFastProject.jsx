@@ -49,6 +49,7 @@ import { GrGallery } from "react-icons/gr";
 
 import React, { useState } from "react"; // Assume Modal is a component you've created
 import PizzaReactSlider from "../Sliders/PizzaReactSlider";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 export default function PizzaFastProject() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -84,9 +85,13 @@ export default function PizzaFastProject() {
 }
 
 function ProjectDetails({ onClose }) {
+  const ref = useOutsideClick(onClose);
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 flex items-center justify-center p-8 md:p-[100px] overflow-x-scroll ">
-      <div className="bg-white p-5 rounded-lg w-full my-auto">
+      <div
+        ref={ref}
+        className="bg-white p-5 rounded-lg w-full xl:w-auto my-auto"
+      >
         <h1 className="font-bold text-4xl mb-4">FastReactPizza</h1>
         <div className="">
           <p className="font-bold text-xl mb-2 flex items-center gap-1">
@@ -168,6 +173,7 @@ function ProjectDetails({ onClose }) {
             <a
               href="https://dardan100.github.io/FastReactPizza/"
               target="_blank"
+              rel="noreferrer"
             >
               <button
                 onClick={onClose}
@@ -180,6 +186,7 @@ function ProjectDetails({ onClose }) {
             <a
               href="https://github.com/dardan100/FastReactPizza"
               target="_blank"
+              rel="noreferrer"
             >
               <button className="mt-10 p-2 bg-cyan-600 text-white rounded">
                 Code

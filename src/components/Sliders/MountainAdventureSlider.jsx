@@ -44,7 +44,7 @@ export default function PizzaReactSlider() {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="w-[80%] ">
+      <div className="w-[80%] max-w-[800px] ">
         <Slider {...settings}>
           <span className="">
             <img src={img1} alt="item1" />

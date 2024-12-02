@@ -1,6 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import ImagePortfolio from "./components/ImagePortfolio";
+
 import InterestAreas from "./components/InterestAreas";
 
 import Header from "./components/Header";

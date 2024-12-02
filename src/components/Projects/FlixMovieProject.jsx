@@ -1,6 +1,6 @@
 // import React from "react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 import flixMovie from "../../images/MainFlixMovie.png";
 import { GiStack } from "react-icons/gi";
 import { FaListCheck } from "react-icons/fa6";
@@ -9,6 +9,7 @@ import { FaCss3Alt } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import FlixMovieSlider from "../Sliders/FlixMovieSlider";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 
 export default function PizzaFastProject() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,9 +46,13 @@ export default function PizzaFastProject() {
 }
 
 function ProjectDetails({ onClose }) {
+  const ref = useOutsideClick(onClose);
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 flex items-center justify-center p-8 md:p-[100px] overflow-x-scroll ">
-      <div className="bg-white p-5 rounded-lg w-full my-auto">
+      <div
+        ref={ref}
+        className="bg-white p-5 rounded-lg w-full xl:w-auto my-auto"
+      >
         <h1 className="font-bold text-4xl mb-4">FlixxMovie</h1>
         <div className="">
           <p className="font-bold text-xl mb-2 flex items-center gap-1">
@@ -127,7 +132,11 @@ function ProjectDetails({ onClose }) {
 
         <div className="flex justify-between">
           <div className="flex gap-2">
-            <a href="https://flixx-app-amber.vercel.app/" target="_blank">
+            <a
+              href="https://flixx-app-amber.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button
                 onClick={onClose}
                 className="mt-10 p-2 bg-cyan-600 text-white rounded"
@@ -136,7 +145,11 @@ function ProjectDetails({ onClose }) {
               </button>
             </a>
 
-            <a href="https://github.com/dardan100/MovieFlixx" target="_blank">
+            <a
+              href="https://github.com/dardan100/MovieFlixx"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button
                 onClick={onClose}
                 className="mt-10 p-2 bg-cyan-600 text-white rounded"

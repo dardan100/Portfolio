@@ -8,6 +8,7 @@ import { FaCss3Alt } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import ReactQuizSlider from "../Sliders/ReactQuizSlider";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 
 export default function PizzaFastProject() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,9 +48,13 @@ export default function PizzaFastProject() {
 }
 
 function ProjectDetails({ onClose }) {
+  const ref = useOutsideClick(onClose);
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 flex items-center justify-center p-8 md:p-[100px] overflow-x-scroll ">
-      <div className="bg-white p-5 rounded-lg w-full my-auto">
+      <div
+        ref={ref}
+        className="bg-white p-5 rounded-lg w-full xl:w-auto my-auto"
+      >
         <h1 className="font-bold text-4xl mb-4">ReactQuiz</h1>
         <div className="">
           <p className="font-bold text-xl mb-2 flex items-center gap-1">
