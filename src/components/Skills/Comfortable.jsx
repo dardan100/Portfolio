@@ -2,6 +2,7 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 export default function Comfortable() {
   return (
@@ -16,6 +17,15 @@ export default function Comfortable() {
             React
           </p>
         </div>
+        <div className="border rounded-md bg-cyan-600 p-2 max-w-32">
+          <p className="flex items-center gap-2 justify-center text-white ">
+            <span>
+              <RiTailwindCssFill />
+            </span>
+            Tailwind
+          </p>
+        </div>
+
         <div className="border rounded-md bg-cyan-600 p-2 max-w-32">
           <p className="flex items-center gap-2 justify-center text-white ">
             <span>

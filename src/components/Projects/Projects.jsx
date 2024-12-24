@@ -4,6 +4,7 @@ import WorldWiseProject from "./WorldWiseProject";
 import FlixMovieProject from "./FlixMovieProject";
 import ReactQuizProject from "./ReactQuizProject";
 import MountainAdventure from "./MountainAdventure";
+import CvCreator from "./CvCreator";
 
 export default function Projects() {
   return (
@@ -13,8 +14,9 @@ export default function Projects() {
         <MountainAdventure />
         <PizzaFastProject />
         <WorldWiseProject />
-        <ReactQuizProject />
+        <CvCreator />
         <FlixMovieProject />
+        <ReactQuizProject />
       </div>
     </>
   );
