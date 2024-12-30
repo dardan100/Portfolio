@@ -137,7 +137,7 @@ function ProjectDetails({ onClose }) {
         <div className="flex justify-between">
           <div className="flex gap-2">
             <a
-              href="https://cv-creator-kd0nzp2dl-dardan100s-projects.vercel.app/"
+              href="https://cv-creator-7oye55qlo-dardan100s-projects.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >
