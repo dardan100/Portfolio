@@ -4,6 +4,7 @@ import WorldWiseProject from "./WorldWiseProject";
 import FlixMovieProject from "./FlixMovieProject";
 import ReactQuizProject from "./ReactQuizProject";
 import MountainAdventure from "./MountainAdventure";
+import MemoryGame from "./MemoryGame";
 import CvCreator from "./CvCreator";
 
 export default function Projects() {
@@ -14,6 +15,7 @@ export default function Projects() {
         <MountainAdventure />
         <PizzaFastProject />
         <WorldWiseProject />
+        <MemoryGame />
         <CvCreator />
         <FlixMovieProject />
         <ReactQuizProject />
