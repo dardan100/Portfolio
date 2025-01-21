@@ -135,7 +135,7 @@ function ProjectDetails({ onClose }) {
         <div className="flex justify-between">
           <div className="flex gap-2">
             <a
-              href="https://memory-game-7cxwl1nb2-dardan100s-projects.vercel.app/"
+              href="https://memory-game-wine-six.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >

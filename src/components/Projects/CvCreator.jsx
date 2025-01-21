@@ -147,7 +147,7 @@ function ProjectDetails({ onClose }) {
             </a>
 
             <a
-              href="https://github.com/dardan100/WorldWise"
+              href="https://github.com/dardan100/CV-Creator"
               target="_blank"
               rel="noreferrer"
             >
